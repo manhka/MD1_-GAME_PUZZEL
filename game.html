@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img width="800px" height="150px" src="image/gau1.jpg" alt="" id="image1" onclick="changeImage()">
+<img width="800px" height="150px" src="image/cat2.jpg" alt="" id="image2" onclick="changeImage1()">
+<img width="800px" height="150px" src="image/khi3.jpg" alt="" id="image3" onclick="changeImage2()">
+<img width="800px" height="150px" src="image/cat4.jpg" alt="" id="image4" onclick="changeImage3()">
+<img width="800px" height="150px" src="image/gau5.jpg" alt="" id="image5" onclick="changeImage4()">
+
+</body>
+</html>
+<script>
+    let count1 = 0;
+    let img1 = document.getElementById('image1');
+
+    function changeImage() {
+        count1++
+        console.log('count1==', count1)
+        if (count1 == 1) {
+            console.log('count==', count1)
+            img1.src = 'image/cat1.jpg'
+        } else if (count1 == 2) {
+            img1.src = 'image/khi1.jpg'
+        } else {
+            count1 = 0
+            img1.src = 'image/gau1.jpg'
+
+        }
+        check()
+    }
+
+    let count2 = 1
+    let img2 = document.getElementById('image2');
+
+    function changeImage1() {
+        count2++
+        console.log('count2==', count2)
+        if (count2 == 1) {
+            img2.src = 'image/cat2.jpg'
+        } else if (count2 == 2) {
+            img2.src = 'image/khi2.jpg'
+        } else {
+            count2 = 0
+            img2.src = 'image/gau2.jpg'
+
+        }
+        check()
+    }
+
+    let count3 = 2
+    let img3 = document.getElementById('image3');
+
+    function changeImage2() {
+        count3++
+        console.log('count3==', count3)
+        if (count3 == 1) {
+            img3.src = 'image/cat3.jpg'
+        } else if (count3 == 2) {
+            img3.src = 'image/khi3.jpg'
+        } else {
+            count3 = 0
+            img3.src = 'image/gau3.jpg'
+
+        }
+        check()
+    }
+    let count4 = 1
+    let img4 = document.getElementById('image4');
+
+    function changeImage3() {
+        count4++
+        console.log('count4==', count4)
+        if (count4 == 1) {
+            img4.src = 'image/cat4.jpg'
+        } else if (count4 == 2) {
+            img4.src = 'image/khi4.jpg'
+        } else if (count4 == 3) {
+            img4.src = 'image/gau4.jpg'
+            count4 = 0
+        }
+        check()
+    }
+
+    let count5 = 0
+    let img5 = document.getElementById('image5');
+
+    function changeImage4() {
+        count5++
+        console.log('count4==', count4)
+        if (count5 == 1) {
+            img5.src = 'image/cat5.jpg'
+        } else if (count5 == 2) {
+            img5.src = 'image/khi5.jpg'
+        } else {
+            count5 = 0
+            img5.src = 'image/gau5.jpg'
+
+        }
+        check()
+    }
+
+    function check() {
+        if (count1 == count2 && count2 == count3 && count1 == count4 && count1 == count5) {
+            img1.style.boxShadow = 'red 4px 1px 1px'
+            img2.style.boxShadow = 'red 4px 1px 1px'
+            img3.style.boxShadow = 'red 4px 1px 1px'
+            img4.style.boxShadow = 'red 4px 1px 1px'
+            img5.style.boxShadow = 'red 4px 1px 1px'
+        } else {
+            img1.style.boxShadow = 'blue 4px 1px 1px'
+            img2.style.boxShadow = ' blue 4px 1px 1px'
+            img3.style.boxShadow = 'blue 4px 1px 1px'
+            img4.style.boxShadow = 'blue 4px 1px 1px'
+            img5.style.boxShadow = 'blue 4px 1px 1px'
+        }
+    }
+
+
+</script>
